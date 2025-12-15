@@ -1,7 +1,6 @@
 from agent import run_project, error_project, modify_project, project_project, generate_project
 import os
 
-
 def main1(prompt):
     # First generation
     code_first_result = generate_project(code_mission=prompt)
