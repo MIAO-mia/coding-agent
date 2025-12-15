@@ -1,0 +1,26 @@
+{
+  "project_folder_name": "flask_todo_app",
+  "project_type": "web",
+  "out_file": [
+    {
+      "file_name": "main.py",
+      "description": "Flask application for a todo list with priority tagging. Contains routes for index, adding tasks with priority, and deleting tasks."
+    },
+    {
+      "file_name": "templates/index.html",
+      "description": "HTML template for the todo list interface, including form for adding tasks with priority selection and displaying tasks with priority indicators."
+    },
+    {
+      "file_name": "static/style.css",
+      "description": "CSS stylesheet that provides a centered layout, card-style design, and clear visual feedback for buttons and task items."
+    },
+    {
+      "file_name": "requirements.txt",
+      "description": "List of Python dependencies required to run the application, including the Flask framework."
+    },
+    {
+      "file_name": "static/css/style.css",
+      "description": "CSS styles for the todo app, including container, buttons, and priority color classes."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arXiv CS Daily</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>arXiv CS Daily</h1>
+        <nav>
+            <ul class="category-nav">
+                <li><a href="{{ url_for('index') }}">All CS Papers</a></li>
+                {% for cat in categories %}
+                <li><a href="{{ url_for('index', category=cat, date=selected_date if selected_date else '') }}">{{ cat }}</a></li>
+                {% endfor %}
+            </ul>
+            <div class="date-picker">
+                <form action="{{ url_for('index') }}" method="get">
+                    <label for="date">Select Date: </label>
+                    <input type="date" id="date" name="date" value="{{ selected_date }}">
+                    <input type="hidden" name="category" value="{{ selected_category }}">
+                    <button type="submit">Go</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="paper-list-section">
+            <h2>Papers {% if selected_category %}in {{ selected_category }}{% endif %} {% if selected_date %}on {{ selected_date }}{% else %}Latest{% endif %}</h2>
+            {% if papers %}
+            <ul class="paper-list">
+                {% for paper in papers %}
+                <li class="paper-item">
+                    <a class="paper-title" href="{{ url_for('paper_detail', paper_id=paper.id) }}">{{ paper.title }}</a>
+                    <span class="paper-field">[{{ paper.field }}]</span>
+                    <span class="paper-time">{{ paper.submission_time[:10] }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No papers found for the selected criteria. Please try a different date or category.</p>
+            {% endif %}
+        </section>
+    </main>
+    <footer>
+        <p>Data sourced from arXiv. Updated automatically.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+</body>
+</html>

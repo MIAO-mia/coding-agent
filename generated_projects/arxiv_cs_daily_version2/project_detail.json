@@ -1,0 +1,34 @@
+{
+  "project_folder_name": "arxiv_cs_daily",
+  "project_type": "web",
+  "out_file": [
+    {
+      "file_name": "main.py",
+      "description": "Flask application serving the arXiv CS Daily webpage with routes for the homepage (supporting category and date filters) and paper detail pages."
+    },
+    {
+      "file_name": "requirements.txt",
+      "description": "List of required Python packages for the Flask web application and data fetching from arXiv."
+    },
+    {
+      "file_name": "arxiv_fetcher.py",
+      "description": "Module for fetching and processing arXiv data with date filtering, now correctly handling date ranges for the arXiv API query format."
+    },
+    {
+      "file_name": "templates/index.html",
+      "description": "HTML template for the homepage, featuring domain-specific navigation, a calendar tool for date selection, and a list of papers filtered by category and date."
+    },
+    {
+      "file_name": "templates/detail.html",
+      "description": "HTML template for the paper detail page, displaying comprehensive metadata, direct PDF access, and citation tools."
+    },
+    {
+      "file_name": "static/css/style.css",
+      "description": "CSS stylesheet for the arXiv CS Daily webpage, providing a clean, responsive design including styles for the new date picker and navigation elements."
+    },
+    {
+      "file_name": "static/js/scripts.js",
+      "description": "JavaScript file for client-side interactivity, including one-click copying of citations and automatic form submission for the date picker to enhance user experience."
+    }
+  ]
+}

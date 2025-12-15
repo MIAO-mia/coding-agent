@@ -1,0 +1,34 @@
+{
+  "project_folder_name": "arxiv_cs_daily",
+  "project_type": "web",
+  "out_file": [
+    {
+      "file_name": "main.py",
+      "description": "Updated Flask application with additional context variables for enhanced templates and improved routing."
+    },
+    {
+      "file_name": "requirements.txt",
+      "description": "List of required Python packages for the Flask web application and data fetching from arXiv."
+    },
+    {
+      "file_name": "arxiv_fetcher.py",
+      "description": "Module for fetching and processing arXiv data with date filtering, now correctly handling date ranges for the arXiv API query format."
+    },
+    {
+      "file_name": "templates/index.html",
+      "description": "Enhanced HTML template with improved structure, visual elements, and additional decorative features for a fancy user interface."
+    },
+    {
+      "file_name": "templates/detail.html",
+      "description": "Enhanced HTML template for the paper detail page with improved visual hierarchy, interactive elements, and fancy styling."
+    },
+    {
+      "file_name": "static/css/style.css",
+      "description": "Enhanced CSS stylesheet with modern, fancy design including gradients, animations, responsive layout, and improved visual elements."
+    },
+    {
+      "file_name": "static/js/scripts.js",
+      "description": "Enhanced JavaScript file with additional interactive features, animations, and improved user feedback."
+    }
+  ]
+}

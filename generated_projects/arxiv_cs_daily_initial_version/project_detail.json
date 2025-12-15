@@ -1,0 +1,34 @@
+{
+  "project_folder_name": "arxiv_cs_daily",
+  "project_type": "web",
+  "out_file": [
+    {
+      "file_name": "main.py",
+      "description": "Flask application serving the arXiv CS Daily webpage with routes for the homepage, category-specific navigation, and paper detail pages."
+    },
+    {
+      "file_name": "requirements.txt",
+      "description": "List of required Python packages for the Flask web application and data fetching from arXiv."
+    },
+    {
+      "file_name": "arxiv_fetcher.py",
+      "description": "Module for fetching and processing arXiv data, including paper lists, details, and citation generation."
+    },
+    {
+      "file_name": "templates/index.html",
+      "description": "HTML template for the homepage, featuring domain-specific navigation and a daily updated list of computer science preprints."
+    },
+    {
+      "file_name": "templates/detail.html",
+      "description": "HTML template for the paper detail page, displaying comprehensive metadata, direct PDF access, and citation tools."
+    },
+    {
+      "file_name": "static/css/style.css",
+      "description": "CSS stylesheet for the arXiv CS Daily webpage, providing a clean, responsive design for navigation and content."
+    },
+    {
+      "file_name": "static/js/scripts.js",
+      "description": "JavaScript file for client-side interactivity, primarily handling one-click copying of citations to the clipboard."
+    }
+  ]
+}

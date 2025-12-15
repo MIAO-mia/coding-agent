@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ paper.title }} - arXiv CS Daily</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1><a href="{{ url_for('index') }}">arXiv CS Daily</a></h1>
+    </header>
+    <main>
+        <article class="paper-detail">
+            <h2>{{ paper.title }}</h2>
+            <div class="metadata">
+                <p><strong>Authors:</strong> {{ paper.authors | join(', ') }}</p>
+                <p><strong>Submission Date:</strong> {{ paper.submission_date[:10] }}</p>
+                <p><strong>Categories:</strong> {{ paper.categories | join(', ') }}</p>
+                <p class="abstract"><strong>Abstract:</strong> {{ paper.abstract }}</p>
+            </div>
+            <div class="resources">
+                <a class="pdf-link" href="{{ paper.pdf_link }}" target="_blank">View PDF</a>
+            </div>
+            <div class="citations">
+                <h3>Citation Tools</h3>
+                <div class="citation-format">
+                    <h4>BibTeX</h4>
+                    <pre id="bibtex">{{ citations.bibtex }}</pre>
+                    <button class="copy-button" onclick="copyCitation('bibtex')">Copy BibTeX</button>
+                </div>
+                <div class="citation-format">
+                    <h4>Standard Academic Citation</h4>
+                    <pre id="standard">{{ citations.standard }}</pre>
+                    <button class="copy-button" onclick="copyCitation('standard')">Copy Standard Citation</button>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p><a href="{{ url_for('index') }}">← Back to Paper List</a></p>
+    </footer>
+</body>
+</html>
